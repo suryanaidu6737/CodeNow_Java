@@ -1,54 +1,91 @@
-Problem Statement
+# String Transformation Using Vowel Index Logic
 
-You are given a string S consisting of uppercase and lowercase English letters.
+## 📌 Problem Statement
 
-Process each character of the string from left to right using 0-based indexing.
+You are given a **string `S`** consisting of uppercase and lowercase English letters.
 
-If the character is a vowel (a, e, i, o, u, A, E, I, O, U):
+Process each character of the string from **left to right** using **0-based indexing**.
 
-Let i be the index of that character.
+### Rules
 
-Compute res = i × 5.
+1. If the character is a **vowel**  
+   (`a, e, i, o, u, A, E, I, O, U`):
 
-Find the sum of all odd numbers from 1 to res (inclusive).
+   - Let `i` be the **index** of that character.
+   - Compute:
+     
+     ```
+     res = i × 5
+     ```
 
-Compute the digital root of that sum (repeatedly add the digits until a single digit remains).
+   - Find the **sum of all odd numbers from 1 to `res` (inclusive)**.
 
-Replace the vowel with this single-digit number.
+   - Compute the **digital root** of that sum  
+     (keep adding digits until a single digit remains).
 
-If the character is not a vowel, keep the character unchanged.
+   - Replace the vowel with the **resulting single digit**.
 
-Print the final transformed string.
+2. If the character is **not a vowel**, keep it **unchanged**.
 
-Input Format
+Finally, print the **transformed string**.
 
-A single line containing a string S.
+---
 
-Output Format
+## 📥 Input Format
 
-Print the modified string after applying the above transformation.
+- A single line containing a **string `S`**.
 
-Constraints
+---
 
-1 ≤ |S| ≤ 1000
+## 📤 Output Format
 
-S contains only alphabetic characters (A–Z, a–z)
+- Print the **modified string** after applying the transformation rules.
 
-Indexing starts from 0
+---
 
-Output must be printed without spaces
+## 📊 Constraints
 
-Example
-Input
+- `1 ≤ |S| ≤ 1000`
+- `S` contains only **alphabetic characters** (`A–Z`, `a–z`)
+- Indexing is **0-based**
+- Output must be printed **without spaces**
+
+---
+
+## 🧠 Example
+
+### Input
+
 program
-Output
+
+
+### Step-by-Step Processing
+
+| Index | Character | Operation |
+|------|-----------|-----------|
+|0|p|Not vowel → print `p`|
+|1|r|Not vowel → print `r`|
+|2|o|Vowel → res = 2×5 = 10 → odd sum = 25 → digital root = 7|
+|3|g|Not vowel → print `g`|
+|4|r|Not vowel → print `r`|
+|5|a|Vowel → res = 5×5 = 25 → odd sum = 169 → digital root = 7|
+|6|m|Not vowel → print `m`|
+
+### Output
+
 pr7gr7m
-Explanation
-Index	Character	Action
-0	p	Not vowel → print p
-1	r	Not vowel → print r
-2	o	Vowel → res=10 → odd sum=25 → digital root=7
-3	g	Not vowel → print g
-4	r	Not vowel → print r
-5	a	Vowel → res=25 → odd sum=169 → digital root=7
-6	m	Not vowel → print m
+
+
+---
+
+## ⚙️ Algorithm Overview
+
+1. Read the input string.
+2. Iterate through each character using its index.
+3. Check if the character is a vowel.
+4. If vowel:
+   - Multiply index by `5`
+   - Sum all odd numbers up to that value
+   - Compute the digital root
+5. Replace the vowel with the computed digit.
+6. Otherwise print the character as it is.
