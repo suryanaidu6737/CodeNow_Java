@@ -1,0 +1,19 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        long A = sc.nextLong();
+        long B = sc.nextLong();
+        long C = sc.nextLong();
+
+        if (A + B > C && A + C > B && B + C > A) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+
+        sc.close();
+    }
+}
