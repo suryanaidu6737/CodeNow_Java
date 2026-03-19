@@ -1,0 +1,14 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      double kilo=sc.nextDouble();
+      double meters=kilo*1000f;
+      double centi=100*meters;
+      double inch=centi/2.54;
+      double feet=inch/12;
+      System.out.printf("%.2f\n%.2f\n%.2f\n%.2f",meters,centi,feet,inch);
+
+     }
+}
