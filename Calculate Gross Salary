@@ -1,0 +1,12 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      double sal=sc.nextDouble();
+      double da=0.40*sal;
+      double ha=0.20*sal;
+      double total=sal+da+ha;
+      System.out.printf("%.2f\n%.2f\n%.2f\n%.2f",sal,da,ha,total);
+    }
+}
