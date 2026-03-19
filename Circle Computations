@@ -1,0 +1,13 @@
+import java.util.Scanner;
+import java.lang.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      double r=sc.nextDouble();
+      double pi=3.14;
+      double dia=2*r;
+      double cir=2*pi*r;
+      double area=pi*r*r;
+      System.out.printf("%.2f\n%.2f\n%.2f",dia,cir,area);
+    }
+}
