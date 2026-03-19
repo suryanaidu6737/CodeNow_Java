@@ -1,0 +1,14 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int win=sc.nextInt();
+      int los=sc.nextInt();
+      int dra=sc.nextInt();
+      int total=win+los+dra;
+      double perc=0.00;
+      if(total!=0)
+      perc=(double)win/total*100f;
+      System.out.printf("%.2f",perc);
+    }
+}
