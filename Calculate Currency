@@ -1,0 +1,21 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int amt=sc.nextInt();
+      int hund=amt/100;
+      amt=amt%100;
+      int fifty=amt/50;
+      amt%=50;
+      int twenty=amt/20;
+      amt%=20;
+      int ten=amt/10;
+      amt%=10;
+      int five=amt/5;
+      amt%=5;
+      int two=amt/2;
+      amt%=2;
+      System.out.print(hund+"\n"+fifty+"\n"+twenty+"\n"+ten+"\n"+five+"\n"+two+"\n"+amt);
+    }
+}
