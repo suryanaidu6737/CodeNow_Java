@@ -1,0 +1,13 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int time=sc.nextInt();
+      int hour=(int)time/3600;
+      time%=3600;
+      int min=time/60;
+      time%=60;
+      System.out.print(hour+":"+min+":"+time);
+    }
+}
