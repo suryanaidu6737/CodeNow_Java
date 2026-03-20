@@ -1,0 +1,24 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      int r=sc.nextInt();
+      if(n>=r){
+        long nfact=factorial(n);
+        long nrfact=factorial(n-r);
+        long rfact=factorial(r);
+        System.out.print(nfact/(nrfact*rfact));
+      }
+    }
+    public static long factorial(int n) {
+        long fact = 1;
+
+        for (int i = 1; i <= n; i++) {
+            fact *= i;
+        }
+
+        return fact;
+    }
+}
