@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+		int sum=0,count=0;
+		while(true){
+			int n=sc.nextInt();
+			if(n==-1) break;
+			sum+=n;
+			count++;
+		}
+		System.out.println("Sum of the given "+count+" numbers is : "+sum);
+		System.out.printf("Mean of the given %d numbers is : %.2f",count,(double)sum/count);
+    }
+}
