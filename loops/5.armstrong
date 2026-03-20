@@ -1,0 +1,20 @@
+import java.util.*;
+import java.lang.*;
+class Main{
+  public static void main(String args[]){
+   Scanner sc=new Scanner(System.in);
+   int n=sc.nextInt();
+   String s=Integer.toString(n);
+   int digits=s.length();
+   int temp=n;
+   int rev=0;
+   while(n>0){
+    int rem=n%10;
+    rev=rev+((int)Math.pow(rem,digits));
+    n/=10;
+   }
+   if(temp==rev)
+   System.out.print("1");
+   else System.out.print("0");
+  }
+}
