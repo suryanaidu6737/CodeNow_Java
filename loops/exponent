@@ -1,0 +1,12 @@
+import java.util.Scanner;
+import java.lang.*;
+class Main {
+   public static void main(String[] args) {
+     // Wirte your code here
+	 Scanner sc=new Scanner(System.in);
+	 int base=sc.nextInt();
+	 int exp=sc.nextInt();
+	 System.out.println((int)Math.pow(base,exp));
+    
+   }
+}
