@@ -1,0 +1,24 @@
+import java.util.*;
+class Main{
+    public static void main(String arg[]){
+        Scanner sc = new Scanner(System.in);
+        int maintank=sc.nextInt();
+        int addtank=sc.nextInt();
+        int consumed=0;
+        int dist=0;
+        while(maintank!=0){
+            if(maintank>=5){
+                maintank-=5;
+                dist+=50;
+                if(addtank>0){
+                maintank++;
+                addtank--;
+                }
+            }else{
+                dist+=maintank*10;
+                maintank=0;
+            }
+        }
+        System.out.print(dist);
+    }
+}
