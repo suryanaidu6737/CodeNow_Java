@@ -1,0 +1,23 @@
+import java.util.*;
+import java.math.BigInteger;
+
+class Main {
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        System.out.print(fact(n));
+    }
+    public static BigInteger fact(int n) {
+     BigInteger tn=factorial(2*n);
+     BigInteger nn=factorial(n);
+     BigInteger n1=factorial(n+1);
+     return tn.divide(nn.multiply(n1));
+    }
+   public static BigInteger factorial(int n) {
+        BigInteger fact = BigInteger.ONE;
+        for (int i = 1; i <= n; i++) {
+            fact = fact.multiply(BigInteger.valueOf(i));
+        }
+    return fact;
+    }
+}
