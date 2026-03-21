@@ -1,0 +1,19 @@
+import java.util.*;
+import java.lang.*;
+class Main{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int sum=0;
+        int count=0;
+        while(n>0){
+            int rem=n%10;
+            if(rem==1)
+            sum+=(int)Math.pow(2,count);
+            count++;
+            n/=10;
+        }
+        System.out.print(sum);
+	}
+}
