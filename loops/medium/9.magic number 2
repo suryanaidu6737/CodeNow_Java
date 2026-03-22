@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        int original = n;
+        int sum = 0;
+
+        // Step 1: Find sum of digits
+        while (n > 0) {
+            sum += n % 10;
+            n /= 10;
+        }
+
+        // Step 2: Reverse the sum
+        int temp = sum;
+        int reverse = 0;
+
+        while (temp > 0) {
+            int rem=temp%10;
+            reverse = reverse * 10 + rem;
+            temp /= 10;
+        }
+
+        // Step 3 & 4: Check condition
+        if (sum * reverse == original)
+            System.out.print("1");
+        else
+            System.out.print("0");
+
+        sc.close();
+    }
+}
