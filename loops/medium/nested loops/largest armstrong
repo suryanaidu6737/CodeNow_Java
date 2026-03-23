@@ -1,0 +1,30 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long n = sc.nextLong();
+        
+        for(long i = n - 1; i > 0; i--) {
+            if(isArmstrong(i)) {
+                System.out.println(i);
+                break;
+            }
+        }
+    }
+
+    static boolean isArmstrong(long num) {
+        long original = num;
+        long sum = 0;
+        
+        int digits = String.valueOf(num).length();
+        
+        while(num > 0) {
+            long digit = num % 10;
+            sum += Math.pow(digit, digits);
+            num /= 10;
+        }
+        
+        return sum == original;
+    }
+}
