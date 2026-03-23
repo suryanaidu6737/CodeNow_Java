@@ -1,0 +1,16 @@
+import java.util.*;
+import java.math.BigInteger;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        String binary = sc.nextLine();
+        
+        // Convert binary string to decimal
+        BigInteger decimal = new BigInteger(binary, 2);
+        
+        // Convert decimal to hexadecimal and print in uppercase
+        System.out.println(decimal.toString(16).toUpperCase());
+    }
+}
