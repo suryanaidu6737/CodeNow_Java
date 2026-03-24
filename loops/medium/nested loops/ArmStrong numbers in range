@@ -1,0 +1,30 @@
+import java.util.Scanner;
+import java.lang.*;
+class Main {
+   public static void main(String[] args) {
+     Scanner sc=new Scanner(System.in);
+     int start=sc.nextInt();
+     int end=sc.nextInt();
+     int sum=0;
+     for(int i=start;i<=end;i++){
+         if(i>=0 && Armstrong(i)){
+            sum+=i;
+         }
+     }
+       System.out.print(sum);
+   }
+   static boolean Armstrong(int n){
+      String s=Integer.toString(n);
+      int digits=s.length();
+      int temp=n;
+      int rev=0;
+      while(n>0){
+         int rem=n%10;
+         rev=rev+((int)Math.pow(rem,digits));
+         n/=10;
+      }
+      if(temp==rev) return true;
+      else return false;
+   }
+
+}
