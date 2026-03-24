@@ -1,0 +1,16 @@
+import java.util.Scanner;
+class Main {
+   public static void main(String[] args) {
+     Scanner sc=new Scanner(System.in);
+     int start=sc.nextInt();
+     int end=sc.nextInt();
+     boolean found=false;
+     for(int i=start;i<=end;i++){
+      if(i%400==0 || (i%100!=0 && i%4==0)){
+         System.out.println(i);
+         found=true;
+      }
+     }
+     if(!found) System.out.print("-1");
+   }
+}
