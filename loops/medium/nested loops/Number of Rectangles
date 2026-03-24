@@ -1,0 +1,14 @@
+import java.util.*;
+class Main{
+    public static void main(String arg[]){
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        int count=0;
+        for(int l=1;l<=n;l++ ){
+            for(int b=1;b<=n;b++){
+                if(l*b<=n && l<=b) count++;
+            }
+        }
+        System.out.print(count);
+    }
+}
