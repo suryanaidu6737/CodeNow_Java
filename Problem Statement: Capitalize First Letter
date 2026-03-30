@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+class Main {
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       String s = sc.nextLine();
+
+       String arr[] = s.split(" ");
+       String res = "";
+
+       for (String str : arr) {
+           if (str.length() > 0) {
+               char first = Character.toUpperCase(str.charAt(0));
+               String rest = str.substring(1);
+               res += first + rest + " ";
+           }
+       }
+
+       System.out.println(res.trim());
+   }
+} 
